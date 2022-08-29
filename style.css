@@ -1,0 +1,437 @@
+/* ========================= GERAL ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+  
+    font-size: 62.5%;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+  
+    font-size: 1.6rem;
+    background-color: var(--body-bg-color);
+  }
+  
+  body * {
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+  
+  h1, h2, p, span {
+    color: var(--text-color);
+  }
+  
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  svg {
+    stroke: var(--text-color);
+  }
+  
+  ul li {
+    color: var(--text-color);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  /* ========================= MAIN ======================= */
+  
+  main {
+    padding: 4rem;
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 34.8rem auto;
+    grid-template-areas:
+     "column content"
+     "column content"
+     "column footer";
+  }
+  
+  .column {
+    width: 34.8rem;
+  
+    grid-area: "column";
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  
+    animation: leftright 700ms;
+  }
+  
+  .wrapper {
+    width: 100%;
+  
+    background: var(--bg-cards);
+    border-radius: 2rem;
+    padding: 3rem 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+    padding: 4rem;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile img {
+    width: 12.8rem;
+    height: 12.8rem;
+    border-radius: 50%;
+    border: 2px solid rgb(158, 1, 158);
+    margin-bottom: 2rem;
+  }
+  
+  .profile img:hover {
+    width: 14rem;
+    height: 14rem;
+  
+    transition: 0.3s;
+    margin: .4rem;
+  }
+  
+  .profile h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: .7rem;
+  }
+  
+  .profile span {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+  
+  .info ul {
+    list-style: none;
+    list-style: var(--text-color);
+  
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  .info h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .info ul li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  
+    transition: 0.2s;
+  }
+  
+  .info ul li:hover {
+    font-size: 1.4rem;
+    margin-left: .2rem;
+  }
+  
+  .technologies {
+    width: 100%;
+  }
+  
+  .technologies h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 7.5rem;
+    height: 2.4rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: var(--bg-techs);
+    margin: 1rem 1rem 0 0;
+  
+    padding: .7rem;
+  
+    border-radius: 3rem;
+  
+    text-transform: uppercase;
+  
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3rem;
+  
+    transition: 0.2s;
+  }
+  
+  .card:hover {
+    width: 8.2rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+    
+    margin: .5rem .5rem 0 0;
+  }
+  
+  .education h2{
+    margin-bottom: 2rem;
+  }
+  
+  .education ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    margin-left: 3rem;
+  }
+  
+  .education p {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  
+  .education span {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  
+  /* ============= MAIN SECTION ======================= */
+  .content {
+    grid-area: "content";
+  }
+  
+  section {
+    margin: 0 0 3rem 6rem;
+    animation: topdown 700ms;
+  }
+  
+  section .title {
+    background: var(--bg-cards);
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+    width: 100%;
+    height: 8.6rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  section .title button {
+    background: none;
+    border: none;
+  
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  
+    cursor: pointer;
+  
+    transition: 0.3s;
+  }
+  
+  section .title button:hover{
+    font-size: 1.5rem;
+  }
+  
+  section .projects {
+    display: flex;
+    gap: 3rem;
+  }
+  
+  section .project {
+    background-color: var(--bg-cards);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+  
+    width: 100%;
+    height: 18.6rem;
+  
+    padding: 3rem;
+  }
+  
+  section .project p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  
+    margin-bottom: 2.5rem;
+  }
+  
+  section .project .file {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  
+    margin-bottom: 2rem;
+  }
+  
+  section .project .file span {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  
+  .file-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .status {
+    width: 12.8rem;
+    height: 2rem;
+  
+    display: inline-flex;
+    align-items: center;
+  
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  
+  .status svg + span {
+    margin-left: .8rem;
+  }
+  
+  .status span + svg {
+    margin-left: 1.6rem;
+  }
+  
+  .technology-used {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  
+  .technology-used button {
+    width: 1.5rem;
+    height: 1.6rem;
+  
+    border-radius: 50%;
+    border: 1px solid var(--text-color);
+    background: hsl(55, 70%, 69%);
+  }
+  
+  .github-posts {
+    width: 100%;
+    height: 20rem;
+  
+    padding: 3rem;
+  
+    background-color: var(--bg-cards);
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .github-posts img {
+    width: 12.8rem;
+    height: 12.8rem;
+    border-radius: 50%;
+  }
+  
+  .informations-post .title-information{
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  
+    margin-bottom: .8rem;
+  }
+  
+  .informations-post .date-information {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .informations-post .about-information {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  
+    margin: 2.8rem 0 .8rem;
+  }
+  
+  .informations-post .tecnologies-information {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  
+    text-transform: lowercase;
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* ================== FOOTER ================== */
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #CB92B1;
+  }
+  
+  footer:hover {
+    animation: balances 700ms;
+  }
+  
+  /* ================== KEYFRAMES ================== */
+  
+  @keyframes topdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes leftright {
+    0%{
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes balances {
+    0% {
+      transform: rotate(0.5turn);
+    }
+  }
