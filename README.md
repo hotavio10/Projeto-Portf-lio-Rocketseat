@@ -9,7 +9,7 @@
 
 A repository with projects made with HTML and CSS.
 
-[clique aqui para acessar](https://https://hotavio10.github.io/Projeto-Portf-lio-Rocketseat/)
+[clique aqui para acessar](https://hotavio10.github.io/Projeto-Portf-lio-Rocketseat/)
 
 ## Tecnologias
 
